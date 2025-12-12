@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - My Account{% endblock %}
+
+{% block content %}
+  <div class="py-4">
+    {% if user %}
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Welcome back, {{ user }}!</h5>
+          <p class="card-text">You are logged in.</p>
+          <a class="btn btn-outline-secondary" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+      </div>
+    {% else %}
+      <div class="text-center">
+        <h2>Welcome to My Account</h2>
+        <p class="lead">Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('register') }}">create an account</a>.</p>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
