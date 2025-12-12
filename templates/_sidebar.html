@@ -1,0 +1,8 @@
+<div class="list-group">
+  <a href="{{ url_for('dashboard_view', section='getting-started') }}" class="list-group-item list-group-item-action {% if active=='getting-started' %}active{% endif %}">Getting Started</a>
+  <a href="{{ url_for('dashboard_view', section='schedule-swing') }}" class="list-group-item list-group-item-action {% if active=='schedule-swing' %}active{% endif %}">Schedule a Swing Analysis</a>
+  <a href="{{ url_for('dashboard_view', section='schedule-fitting') }}" class="list-group-item list-group-item-action {% if active=='schedule-fitting' %}active{% endif %}">Schedule a Fitting</a>
+  <a href="{{ url_for('dashboard_view', section='fitting-progress') }}" class="list-group-item list-group-item-action {% if active=='fitting-progress' %}active{% endif %}">Fitting Progress</a>
+  <a href="{{ url_for('dashboard_view', section='account-history') }}" class="list-group-item list-group-item-action {% if active=='account-history' %}active{% endif %}">Account History</a>
+  <a href="{{ url_for('dashboard_view', section='profile') }}" class="list-group-item list-group-item-action {% if active=='profile' %}active{% endif %}">My Profile</a>
+</div>
