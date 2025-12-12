@@ -1,0 +1,12 @@
+body {
+  background: #f8f9fa;
+}
+.card {
+  border-radius: 0.5rem;
+}
+.navbar-brand {
+  font-weight: 600;
+}
+main.container {
+  max-width: 900px;
+}
