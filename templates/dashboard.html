@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - My Account{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-3">
+      {% include '_sidebar.html' %}
+    </div>
+    <div class="col-md-9">
+      {% include content_template %}
+    </div>
+  </div>
+{% endblock %}
