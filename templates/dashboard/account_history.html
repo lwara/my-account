@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Account History</h4>
+    {% if fittings %}
+      <ul class="list-group">
+        {% for f in fittings %}
+          <li class="list-group-item">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ f.kind|capitalize }}</h5>
+              <small>{{ f.created_at }}</small>
+            </div>
+            <p class="mb-1">Scheduled for: {{ f.scheduled_at }}</p>
+            <small>Status: {{ f.status }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+      <!-- else NO fittings found-->
+    {% else %}
+      <p>No historical fittings found.</p>
+    {% endif %}
+  </div>
+</div>

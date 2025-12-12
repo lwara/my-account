@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">My Profile</h4>
+    <form method="post" action="{{ url_for('profile_post') }}">
+      <div class="mb-3">
+        <label class="form-label">Full name</label>
+        <input name="full_name" class="form-control" value="{{ profile.full_name if profile }}">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <input name="address" class="form-control" value="{{ profile.address if profile }}">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input name="email" type="email" class="form-control" value="{{ profile.email if profile }}">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input name="phone" class="form-control" value="{{ profile.phone if profile }}">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Golf Club Size</label>
+        <input name="club_size" class="form-control" value="{{ profile.club_size if profile }}">
+      </div>
+      <button class="btn btn-primary">Save profile</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Schedule a Swing Analysis</h4>
+    <form method="post" action="{{ url_for('schedule_swing_post') }}">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Date</label>
+          <input type="date" name="date" class="form-control" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Time</label>
+          <input type="time" name="time" class="form-control" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Comments (optional)</label>
+        <textarea name="comments" class="form-control" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>
